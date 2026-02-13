@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Expert insights on luxury home care, material maintenance, and the art of living well in Naples, FL.">
+    <title>Insights & Essentials | Premium Home Cleaning</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --accent: #f43f5e;
+            --depth: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .blog-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/67da39cd58dfd_IMG_8447.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* NEW HEADER STYLES */
+        .header-modern {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(14, 165, 233, 0.15);
+        }
+
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px) scale(0.98);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .dropdown-item {
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(14, 165, 233, 0.05);
+            padding-left: 1.75rem;
+        }
+
+        .nav-link-modern {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link-modern::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-modern:hover::after {
+            width: 100%;
+        }
+
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-premium:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-50 font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 header-modern transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- LOGO ONLY - HIGH VISIBILITY -->
+            <div class="flex items-center">
+                <div class="relative group cursor-pointer" onclick="window.location.href='../Home/'">
+                    <div
+                        class="absolute -inset-4 bg-sky-400/10 rounded-full blur-2xl group-hover:bg-sky-400/20 transition-all duration-500">
+                    </div>
+                    <img src="../images/67a3014975962_PREMIUM4.png" alt="Premium Estates Logo"
+                        class="h-14 md:h-16 w-auto relative z-10 drop-shadow-sm transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+
+            <!-- DESKTOP NAV -->
+            <div class="hidden lg:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em]">
+                <a href="../Home/" class="nav-link-modern text-zinc-900 hover:text-sky-600">Home</a>
+                <a href="../about-us/" class="nav-link-modern text-zinc-900 hover:text-sky-600">About Us</a>
+
+                <!-- SERVICES DROPDOWN -->
+                <div class="nav-item relative group py-4">
+                    <button class="flex items-center gap-1.5 text-zinc-900 hover:text-sky-600 nav-link-modern">
+                        Services <i data-lucide="chevron-down"
+                            class="w-3 h-3 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div
+                        class="dropdown-menu absolute top-full left-0 w-64 bg-white rounded-3xl shadow-2xl shadow-sky-900/10 border border-sky-100 p-4">
+                        <div class="space-y-1">
+                            <a href="../house-cleaning/"
+                                class="dropdown-item flex items-center gap-3 p-3 rounded-2xl hover:bg-sky-50 group/item">
+                                <div
+                                    class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                    <i data-lucide="home" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-[10px] text-zinc-900 font-black">House Cleaning</span>
+                            </a>
+                            <a href="../windows-cleaning/"
+                                class="dropdown-item flex items-center gap-3 p-3 rounded-2xl hover:bg-sky-50 group/item">
+                                <div
+                                    class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                    <i data-lucide="sun" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-[10px] text-zinc-900 font-black">Windows Cleaning</span>
+                            </a>
+                            <a href="../pressure-cleaning/"
+                                class="dropdown-item flex items-center gap-3 p-3 rounded-2xl hover:bg-sky-50 group/item">
+                                <div
+                                    class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                    <i data-lucide="droplets" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-[10px] text-zinc-900 font-black">Pressure Cleaning</span>
+                            </a>
+                            <a href="../pool-cleaning/"
+                                class="dropdown-item flex items-center gap-3 p-3 rounded-2xl hover:bg-sky-50 group/item">
+                                <div
+                                    class="w-8 h-8 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-600 group-hover/item:bg-cyan-600 group-hover/item:text-white transition-colors">
+                                    <i data-lucide="waves" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-[10px] text-zinc-900 font-black">Pool Cleaning</span>
+                            </a>
+                            <a href="../office-cleaning/"
+                                class="dropdown-item flex items-center gap-3 p-3 rounded-2xl hover:bg-sky-50 group/item">
+                                <div
+                                    class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover/item:bg-sky-600 group-hover/item:text-white transition-colors">
+                                    <i data-lucide="briefcase" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-[10px] text-zinc-900 font-black">Office Cleaning</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOCATIONS DROPDOWN -->
+                <div class="nav-item relative group py-4">
+                    <button class="flex items-center gap-1.5 text-zinc-900 hover:text-sky-600 nav-link-modern">
+                        Locations <i data-lucide="chevron-down"
+                            class="w-3 h-3 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div
+                        class="dropdown-menu absolute top-full left-0 w-56 bg-white rounded-3xl shadow-2xl shadow-sky-900/10 border border-sky-100 p-4">
+                        <div class="grid grid-cols-1 gap-1">
+                            <a href="../naples/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Naples, FL
+                            </a>
+                            <a href="../port-royal/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Port Royal
+                            </a>
+                            <a href="../pelican-bay/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Pelican Bay
+                            </a>
+                            <a href="../old-naples/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Old Naples
+                            </a>
+                            <a href="../park-shore/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Park Shore
+                            </a>
+                            <a href="../grey-oaks/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Grey Oaks
+                            </a>
+                            <a href="../bonita-springs/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Bonita Springs
+                            </a>
+                            <a href="../marco-island/"
+                                class="dropdown-item p-3 rounded-2xl text-[10px] text-zinc-900 font-black hover:text-sky-600 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Marco Island
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="../blog/" class="nav-link-modern text-sky-600">Blogs</a>
+                <a href="../gallery/" class="nav-link-modern text-zinc-900 hover:text-sky-600">Gallery</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex items-center gap-6">
+                <a href="tel:+17862469135" class="hidden xl:flex items-center gap-2 text-xs font-black text-sky-700">
+                    <div class="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                    </div>
+                    (786) 246-9135
+                </a>
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                    class="btn-premium px-7 py-3 bg-sky-600 hover:bg-sky-500 text-white rounded-full font-black text-[10px] tracking-widest flex items-center gap-2 shadow-lg shadow-sky-600/20">
+                    RESERVE NOW
+                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+                <button id="mobile-menu-toggle"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center text-zinc-900 bg-sky-100 rounded-xl">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-white flex flex-col p-8 overflow-y-auto w-screen h-screen">
+        <div class="flex items-center justify-between mb-12">
+            <div class="flex flex-col">
+                <img src="../images/67a3014975962_PREMIUM4.png" alt="Logo"
+                    class="h-10 w-auto mb-1 object-contain brightness-100">
+                <span class="text-[8px] font-black text-sky-600 uppercase tracking-[0.4em]">Naples Elite Care</span>
+            </div>
+            <button id="mobile-menu-close"
+                class="w-12 h-12 flex items-center justify-center bg-sky-600 text-white rounded-2xl shadow-xl shadow-sky-600/30 active:scale-90 transition-transform">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-4">
+                <a href="../Home/"
+                    class="text-3xl font-black tracking-tight text-zinc-950 flex items-center justify-between group">
+                    Home <i data-lucide="arrow-up-right"
+                        class="w-5 h-5 text-sky-400 opacity-60 group-hover:opacity-100 transition-opacity"></i>
+                </a>
+                <div class="h-px bg-zinc-100 w-full"></div>
+                <a href="../about-us/"
+                    class="text-3xl font-black tracking-tight text-zinc-950 flex items-center justify-between group">
+                    About Us <i data-lucide="arrow-up-right"
+                        class="w-5 h-5 text-sky-400 opacity-60 group-hover:opacity-100 transition-opacity"></i>
+                </a>
+            </div>
+
+            <!-- Interactive Accordions -->
+            <div class="flex flex-col gap-6 mt-4">
+                <!-- Services Accordion -->
+                <div class="mobile-accordion group">
+                    <button
+                        class="mobile-accordion-header w-full flex items-center justify-between text-zinc-950 text-xl font-black uppercase tracking-widest text-left">
+                        Our Services
+                        <div class="w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center text-sky-600">
+                            <i data-lucide="chevron-down" class="w-5 h-5 chevron-icon"></i>
+                        </div>
+                    </button>
+                    <div class="mobile-accordion-content grid grid-cols-1 gap-2">
+                        <a href="../house-cleaning/" class="mobile-item-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <i data-lucide="home" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-black text-zinc-800">House Cleaning</span>
+                        </a>
+                        <a href="../windows-cleaning/" class="mobile-item-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <i data-lucide="sun" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-black text-zinc-800">Windows Cleaning</span>
+                        </a>
+                        <a href="../pressure-cleaning/"
+                            class="mobile-item-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <i data-lucide="droplets" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-black text-zinc-800">Pressure Cleaning</span>
+                        </a>
+                        <a href="../pool-cleaning/" class="mobile-item-card p-4 rounded-2xl flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center">
+                                <i data-lucide="waves" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-black text-zinc-800">Pool Cleaning</span>
+                        </a>
+                        <a href="../office-cleaning/" class="mobile-item-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-black text-zinc-800">Office Cleaning</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Locations Accordion -->
+                <div class="mobile-accordion group">
+                    <button
+                        class="mobile-accordion-header w-full flex items-center justify-between text-zinc-950 text-xl font-black uppercase tracking-widest text-left">
+                        Locations
+                        <div class="w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center text-sky-600">
+                            <i data-lucide="chevron-down" class="w-5 h-5 chevron-icon"></i>
+                        </div>
+                    </button>
+                    <div class="mobile-accordion-content grid grid-cols-2 gap-2">
+                        <a href="../naples/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Naples, FL</span>
+                        </a>
+                        <a href="../port-royal/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Port Royal</span>
+                        </a>
+                        <a href="../pelican-bay/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Pelican Bay</span>
+                        </a>
+                        <a href="../old-naples/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Old Naples</span>
+                        </a>
+                        <a href="../park-shore/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Park Shore</span>
+                        </a>
+                        <a href="../grey-oaks/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Grey Oaks</span>
+                        </a>
+                        <a href="../bonita-springs/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Bonita Springs</span>
+                        </a>
+                        <a href="../marco-island/" class="mobile-item-card p-3 rounded-xl text-center">
+                            <span class="text-[10px] font-black text-zinc-800">Marco Island</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-6">
+                <a href="../blog/"
+                    class="p-5 rounded-2xl bg-sky-600 text-white border border-sky-600 text-[10px] font-black uppercase tracking-widest text-center">Blogs</a>
+                <a href="../gallery/"
+                    class="p-5 rounded-2xl bg-zinc-50 border border-zinc-100 text-[10px] font-black uppercase tracking-widest text-center">Gallery</a>
+            </div>
+        </div>
+
+        <div class="mt-auto pt-16 flex flex-col gap-4">
+            <a href="#contact"
+                class="flex items-center justify-center w-full py-6 bg-sky-600 text-white rounded-[2rem] font-black text-lg shadow-2xl shadow-sky-600/40 active:scale-95 transition-transform">
+                RESERVE NOW
+            </a>
+            <div class="flex items-center justify-center gap-6 py-4">
+                <a href="tel:+17862469135"
+                    class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                </a>
+                <a href="#"
+                    class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+                <a href="#"
+                    class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG HERO -->
+    <header class="blog-hero min-h-[60vh] flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 pt-32 relative z-10 w-full">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <span class="text-sky-400 font-extrabold tracking-[0.3em] uppercase text-xs mb-4 block">Editorial</span>
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter mb-8">
+                    Insights & <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-white">Essentials.</span>
+                </h1>
+                <p class="text-xl text-slate-300 font-medium leading-relaxed max-w-2xl">
+                    Curated advice on maximizing the longevity of your estate's finest materials and the art of
+                    maintaining a pristine environment.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- LATEST ARTICLES GRID -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Featured Post -->
+            <div class="mb-24" data-aos="fade-up">
+                <article class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-[2.5rem] h-[400px] lg:h-[500px]">
+                        <img src="../images/67da3a26aa76c_IMG_8453.jpg" alt="Featured Post"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest text-zinc-900 border border-white/50">
+                            Featured
+                        </div>
+                    </div>
+                    <div>
+                        <div
+                            class="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-sky-600 mb-4">
+                            <span>Material Care</span>
+                            <span class="w-1 h-1 bg-zinc-300 rounded-full"></span>
+                            <span class="text-zinc-400">5 Min Read</span>
+                        </div>
+                        <h2
+                            class="text-3xl md:text-5xl font-black text-zinc-900 leading-tight mb-6 group-hover:text-sky-600 transition-colors">
+                            The Secret to Preserving Italian Marble in Humid Climates
+                        </h2>
+                        <p class="text-zinc-500 text-lg leading-relaxed mb-8">
+                            Naples' humidity can be the silent enemy of natural stone. Discover the professional-grade
+                            sealants and daily protocols that keep your marble floors looking showroom-ready year-round.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-zinc-900 font-black tracking-widest text-xs uppercase group-hover:gap-4 transition-all">
+                            Read Article <i data-lucide="arrow-right" class="w-4 h-4 text-sky-600"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Article Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Post 1 -->
+                <article class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-[2rem] h-64 mb-6">
+                        <img src="../images/67da39b2befd6_IMG_80081.jpg" alt="Post Thubnail"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-sky-600 mb-3">
+                        <span>Window Care</span>
+                        <span class="w-1 h-1 bg-zinc-300 rounded-full"></span>
+                        <span class="text-zinc-400">3 Min Read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black text-zinc-900 leading-tight mb-3 group-hover:text-sky-600 transition-colors">
+                        Why "Streak-Free" Is More Than Just a Slogan
+                    </h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-4">
+                        Understanding the chemistry behind professional window cleaning solutions versus store-bought
+                        brands.
+                    </p>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-[2rem] h-64 mb-6">
+                        <img src="../images/67c10517ca28e_full-shot-people-cleaning-office.webp" alt="Post Thubnail"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-sky-600 mb-3">
+                        <span>Commercial</span>
+                        <span class="w-1 h-1 bg-zinc-300 rounded-full"></span>
+                        <span class="text-zinc-400">4 Min Read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black text-zinc-900 leading-tight mb-3 group-hover:text-sky-600 transition-colors">
+                        First Impressions: The Office Cleanliness ROI
+                    </h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-4">
+                        How a perfectly sanitized workspace directly impacts client perception and employee productivity
+                        in Naples.
+                    </p>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-[2rem] h-64 mb-6">
+                        <img src="../images/67da3acc1bb6b_IMG_8485.jpg" alt="Post Thubnail"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-sky-600 mb-3">
+                        <span>Lifestyle</span>
+                        <span class="w-1 h-1 bg-zinc-300 rounded-full"></span>
+                        <span class="text-zinc-400">6 Min Read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black text-zinc-900 leading-tight mb-3 group-hover:text-sky-600 transition-colors">
+                        Preparing Your Estate for the Season
+                    </h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-4">
+                        A comprehensive checklist for returning residents to ensure their home is fresh, safe, and
+                        welcoming.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER OPT-IN -->
+    <section class="py-24 bg-zinc-950 relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-600/20 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <i data-lucide="mail-plus" class="w-12 h-12 text-sky-500 mx-auto mb-8"></i>
+            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">Join the Inner Circle</h2>
+            <p class="text-zinc-400 text-lg mb-10">Receive exclusive maintenance tips and priority booking access before
+                the general public.</p>
+
+            <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Your Email Address"
+                    class="flex-1 bg-white/10 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-zinc-500 focus:outline-none focus:border-sky-500 transition-colors">
+                <button type="button"
+                    class="px-8 py-4 bg-sky-600 text-white font-black uppercase tracking-widest rounded-2xl hover:bg-sky-500 transition-colors shadow-lg shadow-sky-600/20">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative bg-sky-50/90 backdrop-blur-3xl py-24 border-t border-sky-100/50" id="contact">
+        <!-- Subtle Radial Gradient Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-400/30 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- TOP INTEGRATED CTA -->
+            <div
+                class="mb-20 p-8 md:p-12 rounded-[2.5rem] bg-white border border-sky-100 shadow-[0_20px_50px_rgba(14,165,233,0.08)] flex flex-col lg:flex-row items-center justify-between gap-8 transform hover:-translate-y-1 transition-all duration-500">
+                <div class="text-center lg:text-left">
+                    <h3 class="text-3xl md:text-4xl font-black text-zinc-900 tracking-tighter mb-3">
+                        Ready for a <span class="text-sky-600">Pristine</span> Home?
+                    </h3>
+                    <p class="text-zinc-500 font-bold max-w-md">Join hundreds of Naples families who trust our
+                        white-glove team for their weekly sanctuary maintenance.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                        class="w-full sm:w-auto px-10 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl shadow-sky-600/20 hover:bg-sky-500 transition-all">
+                        Book Your Clean Now
+                    </button>
+                    <a href="tel:+17862469135"
+                        class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-5 border-2 border-sky-100 text-sky-600 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-sky-50 transition-all">
+                        <i data-lucide="phone" class="w-4 h-4"></i> (786) 246-9135
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-zinc-900">
+                <!-- Column 1: Brand & Social -->
+                <div class="space-y-8" data-aos="fade-up">
+                    <div class="flex items-center gap-3">
+                        <img src="../images/67a3014975962_PREMIUM4.png" alt="Premium Estates Logo" class="h-10 w-auto">
+                        <span class="text-3xl font-black tracking-tighter uppercase italic text-sky-950">Premium
+                            Estates</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-zinc-500 font-black">
+                        Southwest Florida's premier residential sanitization boutique. We specialize in
+                        ultra-high-end estate maintenance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-white border border-sky-100 flex items-center justify-center text-zinc-400 hover:text-sky-600 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-600/10 transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-white border border-sky-100 flex items-center justify-center text-zinc-400 hover:text-sky-600 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-600/10 transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Extreme Service Details -->
+                <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-sky-600 font-black uppercase tracking-[0.2em] text-[10px]">Specialized Services
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a href="../house-cleaning/"
+                                class="group flex items-center gap-3 text-sm font-black hover:text-sky-600 transition-colors">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> House Cleaning
+                            </a></li>
+                        <li><a href="../windows-cleaning/"
+                                class="group flex items-center gap-3 text-sm font-black hover:text-sky-600 transition-colors">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Window
+                                Sanitization
+                            </a></li>
+                        <li><a href="../pressure-cleaning/"
+                                class="group flex items-center gap-3 text-sm font-black hover:text-sky-600 transition-colors">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Pressure
+                                Restoration
+                            </a></li>
+                        <li><a href="../pool-cleaning/"
+                                class="group flex items-center gap-3 text-sm font-black hover:text-sky-600 transition-colors">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Professional Pool
+                                Care
+                            </a></li>
+                        <li><a href="../office-cleaning/"
+                                class="group flex items-center gap-3 text-sm font-black hover:text-sky-600 transition-colors">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Office &
+                                Commercial
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Extreme Location SEO Grid -->
+                <div class="space-y-8 lg:col-span-1" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-sky-600 font-black uppercase tracking-[0.2em] text-[10px]">Premier Coverage
+                        Areas</h4>
+                    <div
+                        class="grid grid-cols-2 gap-x-4 gap-y-3 text-[10px] font-black uppercase tracking-wider text-zinc-500">
+                        <a href="../naples/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Naples, FL</a>
+                        <a href="../port-royal/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Port Royal</a>
+                        <a href="../pelican-bay/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Pelican Bay</a>
+                        <a href="../old-naples/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Old Naples</a>
+                        <a href="../park-shore/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Park Shore</a>
+                        <a href="../grey-oaks/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Grey Oaks</a>
+                        <a href="../bonita-springs/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Bonita Springs</a>
+                        <a href="../marco-island/"
+                            class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Marco Island</a>
+                        <a href="#areas" class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Lely Resort</a>
+                        <a href="#areas" class="hover:text-sky-600 transition-colors flex items-center gap-1.5"><span
+                                class="w-1 h-1 bg-sky-200 rounded-full"></span> Vineyards</a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Local Authenticity Widget -->
+                <div class="space-y-8" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-sky-600 font-black uppercase tracking-[0.2em] text-[10px]">Concierge Status</h4>
+                    <div
+                        class="bg-white rounded-3xl p-6 border border-sky-100 shadow-[0_10px_30px_rgba(14,165,233,0.04)] relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform">
+                            <i data-lucide="map-pin" class="w-16 h-16 text-sky-600"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="flex h-3 w-3 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-xs font-black text-emerald-600 uppercase tracking-widest">Team
+                                Dispatch Live</span>
+                        </div>
+                        <p class="text-[13px] font-black text-zinc-900 leading-tight mb-4">Current availability in
+                            Naples: <span class="text-sky-600">3 Slots Open</span> for Friday.</p>
+                        <div
+                            class="flex items-center gap-2 text-[10px] font-black text-zinc-400 uppercase tracking-widest">
+                            <i data-lucide="shield-check" class="w-3 h-3"></i> Licensed & Insured
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-12 border-t border-sky-100/50 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400">
+                    © 2026 Premium Home Cleaning Service. All Professional Maintenance Guaranteed.
+                </div>
+
+                <div class="flex items-center gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
+                    <a href="../about-us/" class="text-zinc-400 hover:text-sky-600 transition-colors">About Us</a>
+                    <a href="../blog/" class="text-zinc-400 hover:text-sky-600 transition-colors">Blog</a>
+                    <a href="../gallery/" class="text-zinc-400 hover:text-sky-600 transition-colors">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 900,
+            easing: 'ease-out-cubic'
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Accordion Logic
+        document.querySelectorAll('.mobile-accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                const isActive = parent.classList.contains('mobile-accordion-active');
+
+                // Close all other accordions
+                document.querySelectorAll('.mobile-accordion').forEach(acc => {
+                    acc.classList.remove('mobile-accordion-active');
+                });
+
+                if (!isActive) {
+                    parent.classList.add('mobile-accordion-active');
+                }
+            });
+        });
+
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Target ALL links within the mobile menu
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            // Refresh AOS inside the menu
+            setTimeout(() => {
+                AOS.refresh();
+                if (window.lucide) lucide.createIcons();
+            }, 100);
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Short timeout to allow the link to start navigating
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+
+</html>
